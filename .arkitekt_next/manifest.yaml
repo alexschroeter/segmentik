@@ -1,0 +1,6 @@
+author: alexwillhelmi
+entrypoint: app
+identifier: segmentik
+scopes:
+- read
+version: 0.0.1
