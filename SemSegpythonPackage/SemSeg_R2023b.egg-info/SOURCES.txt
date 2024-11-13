@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+SemSeg/SemSeg.ctf
+SemSeg/__init__.py
+SemSeg_R2023b.egg-info/PKG-INFO
+SemSeg_R2023b.egg-info/SOURCES.txt
+SemSeg_R2023b.egg-info/dependency_links.txt
+SemSeg_R2023b.egg-info/top_level.txt

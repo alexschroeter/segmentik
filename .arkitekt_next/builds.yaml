@@ -1,0 +1,1240 @@
+builds:
+- build_id: 9b802cc0-454e-4e9c-b51b-92c1ac43e532
+  build_run: 8140c21a-4287-40cf-a2b4-2522b40d9185
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kraph to relate entities
+      key: kraph
+      optional: false
+      service: live.arkitekt.kraph
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20868570653
+    templates:
+    - definition:
+        args:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchImages($search: String, $values: [ID!]) {\n  options:\
+              \ images(\n    filters: {name: {contains: $search}, ids: $values}\n\
+              \    pagination: {limit: 10}\n  ) {\n    value: id\n    label: name\n\
+              \    __typename\n  }\n}"
+            ward: mikro
+          identifier: '@mikro/image'
+          key: n
+          kind: STRUCTURE
+          nullable: false
+          scope: GLOBAL
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: e64ae8ed-4630-4ef5-b721-7056f0c21b8b
+  build_run: f411ba62-92b9-4d3b-9ece-59241c33b21c
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20868573798
+    templates:
+    - definition:
+        args:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchImages($search: String, $values: [ID!]) {\n  options:\
+              \ images(\n    filters: {name: {contains: $search}, ids: $values}\n\
+              \    pagination: {limit: 10}\n  ) {\n    value: id\n    label: name\n\
+              \    __typename\n  }\n}"
+            ward: mikro
+          identifier: '@mikro/image'
+          key: n
+          kind: STRUCTURE
+          nullable: false
+          scope: GLOBAL
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: 52fdc741-0205-4f4f-a283-e130a5a2e961
+  build_run: 62f5ac0c-9218-454d-be11-fae848469dc2
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869241157
+    templates:
+    - definition:
+        args:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchImages($search: String, $values: [ID!]) {\n  options:\
+              \ images(\n    filters: {name: {contains: $search}, ids: $values}\n\
+              \    pagination: {limit: 10}\n  ) {\n    value: id\n    label: name\n\
+              \    __typename\n  }\n}"
+            ward: mikro
+          identifier: '@mikro/image'
+          key: n
+          kind: STRUCTURE
+          nullable: false
+          scope: GLOBAL
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: 11b3f1ee-a190-43f7-b823-d96f7a4dbc28
+  build_run: 99ae9d7e-a9c3-4d15-9057-1a8088e430c1
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869243840
+    templates:
+    - definition:
+        args:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchImages($search: String, $values: [ID!]) {\n  options:\
+              \ images(\n    filters: {name: {contains: $search}, ids: $values}\n\
+              \    pagination: {limit: 10}\n  ) {\n    value: id\n    label: name\n\
+              \    __typename\n  }\n}"
+            ward: mikro
+          identifier: '@mikro/image'
+          key: n
+          kind: STRUCTURE
+          nullable: false
+          scope: GLOBAL
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: fd194c1a-9d0e-414a-8b11-efda293fd3c9
+  build_run: 4eeed834-08b1-47ae-ae34-9b964e596aaf
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869246468
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: f1cbb150-c845-43e4-908e-b7df2af53cde
+  build_run: ca7c5eb7-dd74-4d8c-b2f2-5f0735437ad8
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869248616
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: 89096e06-2201-4a9b-ab82-e2ea0cd4588f
+  build_run: 2c1840c2-883a-4fcd-853b-5847178c7fdf
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869250760
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: c129e0e5-f4bd-4839-ad37-6e671a381875
+  build_run: dd933333-29e0-4e58-9e4d-7d06b821cae9
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869252904
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: 44e916fc-ef6b-4be5-9b37-ec638757104c
+  build_run: 8293acd1-64b9-4e4d-ad48-a9991952bf46
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869255048
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: be1501cd-cd01-4138-8cc9-3972c2830de3
+  build_run: 3242358a-6ea8-40f1-99b0-9042b5dde589
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869257192
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: 2a799cbd-076d-41fd-b69a-c33364b2753c
+  build_run: 3d028014-22a6-484f-9da3-21164b6ad23a
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869267868
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: 70afbb00-8a2a-430d-a96f-fb9bc2f46c0f
+  build_run: b12316af-a172-4ad3-8b7e-47ae747d70fc
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869270301
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: 021a6053-820e-4162-82a3-f1f0b1d72daf
+  build_run: 56850b86-dbe7-4149-ad10-9ec75b1e0960
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 20869272455
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: a57be019-ef91-4925-90d2-531b416ea772
+  build_run: 3ebf7a66-0d90-4fee-b2a8-543423dc6c65
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 21059873493
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: c4da1a33-90a9-44ad-b832-3a6375ae6eee
+  build_run: a111ffaf-39dc-4a30-8de1-22a25a588ebd
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 21059875627
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: 17cf7691-9b46-4865-b102-e8d3a4f63b1c
+  build_run: 19051df5-48df-45e0-a001-ea490e338894
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 21059877804
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: 7aae3798-9bac-4c83-9aa1-62335720f7c9
+  build_run: f5084950-a1e4-4dc6-871d-5203a8dc58fb
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext kabinet to relate entities
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 21059879938
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Run Segmantik Segmentation
+        portGroups: []
+        returns:
+        - identifier: mikro_next.api.schema.table
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          scope: LOCAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: run_segmantik_segmentation
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: segmentik
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+latest_build_run: f5084950-a1e4-4dc6-871d-5203a8dc58fb
