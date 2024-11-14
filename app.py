@@ -21,17 +21,17 @@ async def startup(instance_id) -> MatlabContext:
 
 
 @register
-def run_segmantik_segmentation(context: MatlabContext) -> Table:
+def run_segmantik_segmentation(context: MatlabContext, n: Image) -> Table:
     
     # TODO: Select the correct dimension of the image (dims: c, t, z, y, x)
-    # image_data = n.data.sel(t=0)
+    image_data = n.data.sel(c=0,t=0)
 
     # Convert the image data to a tiff file
-    # tifffile.imwrite('image.tif', image_data)
+    tifffile.imwrite('image.tif', image_data)
 
     # Run the segmentation algorithm
     context.app.SemanticSegmentation(
-        "/app/input.tif",
+        "/app/image.tif",
         "/app/results/csvFiles",
         "Kraemer2024A-DS0008TP0005DR_D1_CH0001PL_NS",
         matlab.double(1),
@@ -43,11 +43,10 @@ def run_segmantik_segmentation(context: MatlabContext) -> Table:
         )
 
     # Load the csv file
-    df = pd.read_csv("/app/results/csvFiles/semantic_segmentation_points_Kraemer2024A-DS0008TP0005DR_D1_CH0001PL_NS.csv")
+    df = pd.read_csv("/app/results/csvFiles/points.csv", header=None)
+    df.columns =["X", "Y", "Z"] 
 
     # Convert the csv file to a Table
     table = from_parquet_like(df, name="sem_seg_points")
-
-    # TODO: Assign meaning to the columns of the table
 
     return table

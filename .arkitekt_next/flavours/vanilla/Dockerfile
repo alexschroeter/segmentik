@@ -10,10 +10,14 @@ RUN apt update && \
 RUN cd /tmp && \
 	wget https://ssd.mathworks.com/supportfiles/downloads/R2023b/Release/4/deployment_files/installer/complete/glnxa64/MATLAB_Runtime_R2023b_Update_4_glnxa64.zip && \
 	unzip MATLAB_Runtime_R2023b_Update_4_glnxa64.zip && \
-	./install -agreeToLicense yes
+	./install -agreeToLicense yes && \
+    rm MATLAB_Runtime_R2023b_Update_4_glnxa64.zip
 
-RUN mkdir -p /app
-RUN mkdir -p /app/SemSeg
+RUN mkdir -p /app && \
+    mkdir -p /app/SemSeg && \ 
+    mkdir -p /app/results && \
+    mkdir -p /app/results/csvFiles
+
 COPY SemSegpythonPackage /app/SemSeg
 
 RUN cd /app/SemSeg && \
@@ -28,12 +32,9 @@ ENV MCR_MASTER_PATH=/usr/local/MATLAB/MATLAB_Runtime/R2023b
 
 WORKDIR /app
 
-RUN pip3 install "arkitekt-next[all]==0.8.37" tifffile pyarrow fastparquet
-RUN pip3 uninstall kraph
+RUN pip3 install "arkitekt-next[all]==0.8.37" tifffile pyarrow fastparquet && \
+    pip3 uninstall kraph
 
 COPY .arkitekt_next /app/.arkitekt_next
 COPY app.py /app/app.py
 COPY input.tif /app/input.tif
-
-RUN mkdir -p /app/results
-RUN mkdir -p /app/results/csvFiles
